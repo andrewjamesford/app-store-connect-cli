@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "app-store-connect-readonly-cli"
+version = "0.1.0"
+description = "A reusable, read-only App Store Connect reporting CLI"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Andrew Ford"}]
+dependencies = [
+  "PyJWT[crypto]>=2.9,<3",
+  "requests>=2.32,<3",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<9"]
+
+[project.scripts]
+asc = "asc_cli.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/asc_cli"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
