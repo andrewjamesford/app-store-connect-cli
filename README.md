@@ -40,7 +40,7 @@ export ASC_VENDOR_NUMBER="your-vendor-number"
 ## Setup
 
 ```bash
-cd /Users/andrewford/Developer/Projects/app-store-connect-cli
+cd /Users/andrewford/Developer/tools/app-store-connect-cli
 python3 -m venv .venv
 .venv/bin/python -m pip install -e .
 ```
